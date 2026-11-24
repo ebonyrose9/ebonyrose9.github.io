@@ -26,6 +26,7 @@
   .page { height: 100vh; height: 100dvh; min-height: 520px; display: flex; flex-direction: column; }
   header { padding: 24px 28px; }
   .wordmark { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+  .sub { display: none; margin: 4px 0 0; }
 
   .track {
     flex: 1 1 auto; min-height: 0;
@@ -63,16 +64,19 @@
   .bar span { position: absolute; left: 0; top: 0; height: 1px; width: 4%; background: var(--ink); }
 
   @media (max-width: 640px) {
-    header { padding: 18px 20px; }
-    .track { gap: 56px; padding: 0 20px; }
+    header { padding: 18px 20px 0; }
+    .sub { display: block; }
+    .intro { display: none; }
+    .track { gap: 28px; padding: 0 20px; }
+    figure img, figure video { height: 52vh !important; max-width: 78vw; }
+    .top, .bottom { align-self: center; margin-top: 0; }
     footer { padding: 14px 20px 18px; }
-    .top { margin-top: 0; }
   }
 </style>
 </head>
 <body>
 <div class="page">
-  <header><a class="wordmark" href="./">ebony rose photo</a></header>
+  <header><a class="wordmark" href="./">ebony rose photo</a><p class="sub muted">Photography — Sydney · Fashion, swim and travel.</p></header>
 
   <main class="track" id="track">
     <section class="intro">
@@ -87,37 +91,37 @@
     </figure>
 
     <figure class="bottom">
-      <figcaption><span class="n">02</span><span>Bondi, midday</span></figcaption>
+      <figcaption><span class="n">02</span><span>Bondi, Sydney</span></figcaption>
       <img src="02-bondi-walk.jpg" alt="Model walking along Bondi Beach behind a lifeguard board" loading="lazy" style="height:62vh;aspect-ratio:2/3">
     </figure>
 
     <figure class="top">
-      <figcaption><span class="n">03</span><span>Bond-Eye</span></figcaption>
+      <figcaption><span class="n">03</span><span>Bondi, Sydney</span></figcaption>
       <img src="03-bond-eye-green.jpg" alt="Model in a green one-piece, side profile at the shoreline" loading="lazy" style="height:58vh;aspect-ratio:2/3">
     </figure>
 
     <figure class="bottom">
-      <figcaption><span class="n">04</span><span>Rottnest Island</span></figcaption>
+      <figcaption><span class="n">04</span><span>Rottnest Island, Western Australia</span></figcaption>
       <img src="04-rottnest.jpg" alt="Clear turquoise water and white sand under a deep blue sky" loading="lazy" style="height:64vh;aspect-ratio:3/4">
     </figure>
 
     <figure class="top">
-      <figcaption><span class="n">05</span><span>Bond-Eye</span></figcaption>
+      <figcaption><span class="n">05</span><span>Bondi, Sydney</span></figcaption>
       <img src="05-bond-eye-bw.jpg" alt="Black and white, model from behind in a one-piece, looking over her shoulder" loading="lazy" style="height:56vh;aspect-ratio:2/3">
     </figure>
 
     <figure>
-      <figcaption><span class="n">06</span><span>Bond-Eye, motion</span></figcaption>
+      <figcaption><span class="n">06</span><span></span></figcaption>
       <video src="06-bond-eye-motion.mp4" poster="06-bond-eye-motion-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Model in a green one-piece seated on the sand, moving in the wind" style="height:66vh;aspect-ratio:9/16"></video>
     </figure>
 
     <figure class="bottom">
-      <figcaption><span class="n">07</span><span></span></figcaption>
+      <figcaption><span class="n">07</span><span>Dorrigo Mountain</span></figcaption>
       <img src="07-waterfall.jpg" alt="Waterfall seen from behind through hanging vines" loading="lazy" style="height:56vh;aspect-ratio:3/4">
     </figure>
 
     <figure class="top">
-      <figcaption><span class="n">08</span><span>Last light</span></figcaption>
+      <figcaption><span class="n">08</span><span>Maroubra sunrise</span></figcaption>
       <video src="08-last-light.mp4" poster="08-last-light-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Orange sunset clouds over a rough ocean" style="height:62vh;aspect-ratio:9/16"></video>
     </figure>
 
