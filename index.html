@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ebony rose photo — Photography, Sydney</title>
+<meta name="description" content="Sydney-based photographer working across fashion, swim and travel.">
+<meta property="og:title" content="ebony rose photo">
+<meta property="og:description" content="Sydney-based photographer working across fashion, swim and travel.">
+<meta property="og:image" content="03-bond-eye-green.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --ground: #f6f4f0; --ink: #1a1a1a; --muted: #6b6b6b; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: 'Inter Tight', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.01em;
+    overflow: hidden;
+  }
+  a { color: var(--ink); text-decoration: none; }
+  a:hover { color: var(--muted); }
+
+  .page { height: 100vh; height: 100dvh; min-height: 520px; display: flex; flex-direction: column; }
+  header { padding: 24px 28px; }
+  .wordmark { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+
+  .track {
+    flex: 1 1 auto; min-height: 0;
+    display: flex; align-items: center; gap: 120px;
+    overflow-x: auto; overflow-y: hidden;
+    padding: 0 28px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .track::-webkit-scrollbar { display: none; }
+
+  .intro, .info { flex: 0 0 auto; height: 64vh; display: flex; flex-direction: column; }
+  .intro { width: min(320px, 70vw); justify-content: flex-end; gap: 6px; }
+  .info { width: min(380px, 80vw); justify-content: space-between; padding-right: 60px; }
+  .intro p, .info p { margin: 0; }
+  .muted { color: var(--muted); }
+  .bio { font-size: 15px; line-height: 1.45; }
+
+  figure { margin: 0; flex: 0 0 auto; display: flex; flex-direction: column; gap: 6px; }
+  figcaption { display: flex; gap: 10px; font-size: 11px; }
+  figcaption .n { color: var(--muted); }
+  figure img, figure video {
+    display: block; width: auto; object-fit: cover; background: #e6e3de;
+    transition: opacity .3s;
+  }
+  figure img:hover { opacity: .88; }
+  .top { align-self: flex-start; margin-top: 4vh; }
+  .bottom { align-self: flex-end; }
+
+  footer {
+    display: flex; justify-content: space-between; align-items: center; gap: 24px;
+    padding: 20px 28px 24px; color: var(--muted);
+  }
+  .bar { flex: 0 1 220px; height: 1px; background: #cfcbc4; position: relative; }
+  .bar span { position: absolute; left: 0; top: 0; height: 1px; width: 4%; background: var(--ink); }
+
+  @media (max-width: 640px) {
+    header { padding: 18px 20px; }
+    .track { gap: 56px; padding: 0 20px; }
+    footer { padding: 14px 20px 18px; }
+    .top { margin-top: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header><a class="wordmark" href="./">ebony rose photo</a></header>
+
+  <main class="track" id="track">
+    <section class="intro">
+      <p style="font-weight:500">ebony rose photo</p>
+      <p class="muted">Photography — Sydney</p>
+      <p class="muted">Fashion, swim and travel.</p>
+    </section>
+
+    <figure>
+      <figcaption><span class="n">01</span><span>Ipanema, Rio de Janeiro</span></figcaption>
+      <img src="01-ipanema.jpg" alt="Child running past a beach shower at sunset beneath twin peaks" style="height:72vh;aspect-ratio:9/16">
+    </figure>
+
+    <figure class="bottom">
+      <figcaption><span class="n">02</span><span>Bondi, midday</span></figcaption>
+      <img src="02-bondi-walk.jpg" alt="Model walking along Bondi Beach behind a lifeguard board" loading="lazy" style="height:62vh;aspect-ratio:2/3">
+    </figure>
+
+    <figure class="top">
+      <figcaption><span class="n">03</span><span>Bond-Eye</span></figcaption>
+      <img src="03-bond-eye-green.jpg" alt="Model in a green one-piece, side profile at the shoreline" loading="lazy" style="height:58vh;aspect-ratio:2/3">
+    </figure>
+
+    <figure class="bottom">
+      <figcaption><span class="n">04</span><span>Rottnest Island</span></figcaption>
+      <img src="04-rottnest.jpg" alt="Clear turquoise water and white sand under a deep blue sky" loading="lazy" style="height:64vh;aspect-ratio:3/4">
+    </figure>
+
+    <figure class="top">
+      <figcaption><span class="n">05</span><span>Bond-Eye</span></figcaption>
+      <img src="05-bond-eye-bw.jpg" alt="Black and white, model from behind in a one-piece, looking over her shoulder" loading="lazy" style="height:56vh;aspect-ratio:2/3">
+    </figure>
+
+    <figure>
+      <figcaption><span class="n">06</span><span>Bond-Eye, motion</span></figcaption>
+      <video src="06-bond-eye-motion.mp4" poster="06-bond-eye-motion-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Model in a green one-piece seated on the sand, moving in the wind" style="height:66vh;aspect-ratio:9/16"></video>
+    </figure>
+
+    <figure class="bottom">
+      <figcaption><span class="n">07</span><span></span></figcaption>
+      <img src="07-waterfall.jpg" alt="Waterfall seen from behind through hanging vines" loading="lazy" style="height:56vh;aspect-ratio:3/4">
+    </figure>
+
+    <figure class="top">
+      <figcaption><span class="n">08</span><span>Last light</span></figcaption>
+      <img src="08-last-light.jpg" alt="Orange sunset clouds over a rough ocean" loading="lazy" style="height:62vh;aspect-ratio:9/16">
+    </figure>
+
+    <section class="info" id="info">
+      <p class="muted">Information</p>
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <p class="bio">Sydney-based photographer working across fashion, swim and travel.</p>
+        <a href="mailto:ebony.gallant@gmail.com">ebony.gallant@gmail.com</a>
+      </div>
+      <p class="muted">© <span id="yr">2026</span> ebony rose photo</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>Scroll →</span>
+    <div class="bar" aria-hidden="true"><span id="bar"></span></div>
+    <span>Sydney, AU</span>
+  </footer>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const bar = document.getElementById('bar');
+  // Vertical mouse wheel scrolls the strip sideways
+  track.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      track.scrollLeft += e.deltaY;
+      e.preventDefault();
+    }
+  }, { passive: false });
+  // Progress line
+  track.addEventListener('scroll', () => {
+    const max = track.scrollWidth - track.clientWidth;
+    const p = max > 0 ? track.scrollLeft / max : 0;
+    bar.style.width = Math.max(4, p * 100) + '%';
+  }, { passive: true });
+  // Make sure the video starts (some browsers need a nudge)
+  document.querySelectorAll('video').forEach((v) => {
+    v.muted = true;
+    const p = v.play(); if (p && p.catch) p.catch(() => {});
+  });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
