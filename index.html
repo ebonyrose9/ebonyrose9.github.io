@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root { --ground: #f6f4f0; --ink: #1a1a1a; --muted: #6b6b6b; }
+  :root { --ground: #ffffff; --ink: #1a1a1a; --muted: #6b6b6b; }
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; }
   body {
@@ -48,7 +48,7 @@
   figcaption { display: flex; gap: 10px; font-size: 11px; }
   figcaption .n { color: var(--muted); }
   figure img, figure video {
-    display: block; width: auto; object-fit: cover; background: #e6e3de;
+    display: block; width: auto; object-fit: cover; background: #f2f2f2;
     transition: opacity .3s;
   }
   figure img:hover { opacity: .88; }
@@ -118,7 +118,7 @@
 
     <figure class="top">
       <figcaption><span class="n">08</span><span>Last light</span></figcaption>
-      <video src="08-last-light.mp4" poster="08-last-light-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Orange sunset clouds over a rough ocean" style="height:62vh;aspect-ratio:9/16"></video>
+      <video src="08-last-light.mp4" poster="08-last-light-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Orange sunset clouds over a rough ocean" style="height:62vh;aspect-ratio:9/16"></video>
     </figure>
 
     <section class="info" id="info">
@@ -154,11 +154,21 @@
     const p = max > 0 ? track.scrollLeft / max : 0;
     bar.style.width = Math.max(4, p * 100) + '%';
   }, { passive: true });
-  // Make sure the video starts (some browsers need a nudge)
-  document.querySelectorAll('video').forEach((v) => {
-    v.muted = true;
-    const p = v.play(); if (p && p.catch) p.catch(() => {});
+  // Autoplay all videos (muted, looping); retry if the browser holds them back
+  const vids = Array.from(document.querySelectorAll('video'));
+  const playAll = () => vids.forEach((v) => {
+    v.muted = true; v.defaultMuted = true; v.playsInline = true; v.loop = true;
+    if (v.paused) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
   });
+  vids.forEach((v) => {
+    v.addEventListener('loadeddata', playAll);
+    v.addEventListener('canplay', playAll);
+  });
+  playAll();
+  window.addEventListener('load', playAll);
+  ['scroll', 'wheel', 'pointerdown', 'touchstart', 'keydown'].forEach((ev) =>
+    (ev === 'scroll' ? track : window).addEventListener(ev, playAll, { passive: true }));
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) playAll(); });
   document.getElementById('yr').textContent = new Date().getFullYear();
 </script>
 </body>
