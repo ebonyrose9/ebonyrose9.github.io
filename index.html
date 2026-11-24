@@ -26,7 +26,6 @@
   .page { height: 100vh; height: 100dvh; min-height: 520px; display: flex; flex-direction: column; }
   header { padding: 24px 28px; }
   .wordmark { font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
-  .sub { display: none; margin: 4px 0 0; }
 
   .track {
     flex: 1 1 auto; min-height: 0;
@@ -64,10 +63,9 @@
   .bar span { position: absolute; left: 0; top: 0; height: 1px; width: 4%; background: var(--ink); }
 
   @media (max-width: 640px) {
-    header { padding: 14px 16px 0; }
-    .sub { display: block; }
-    .intro { display: none; }
-    .track { gap: 24px; padding: 0 16px; scroll-padding-left: 16px; }
+    header { padding: 14px 16px; }
+    .intro { width: 50vw; height: 54vh; justify-content: flex-end; }
+    .track { gap: 40px; padding: 0 16px; }
     figure img, figure video { height: 54vh !important; max-width: 80vw; }
     .top, .bottom { align-self: center; margin-top: 0; }
     footer { padding: 8px 16px 12px; gap: 16px; font-size: 11px; line-height: 1; }
@@ -78,7 +76,7 @@
 </head>
 <body>
 <div class="page">
-  <header><a class="wordmark" href="./">ebony rose photo</a><p class="sub muted">Photography — Sydney · Fashion, swim and travel.</p></header>
+  <header><a class="wordmark" href="./">ebony rose photo</a></header>
 
   <main class="track" id="track">
     <section class="intro">
